@@ -4,11 +4,11 @@ import List from './components/List/List.js';
 
 const App = () => {
   return (
-    <div>
+    <Container >
       <Hero />
       <SearchForm />
       <List />
-    </div>
+    </Container>
   );
 };
 
