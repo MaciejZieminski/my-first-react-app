@@ -1,4 +1,4 @@
-import styles from './Columns.module.scss';
+import styles from './Column.module.scss';
 
 const Column = (props) => {
     return (
