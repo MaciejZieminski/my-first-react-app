@@ -1,0 +1,8 @@
+.cardForm {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    & span {
+        margin: 5px;
+    }
+}
