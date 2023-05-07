@@ -8,6 +8,8 @@ const reducer = (state, action) => {
             return { ...state, columns: [...state.columns, { ...action.payload, id: shortid() }]};
         case 'ADD_CARD':
             return {...state, cards: [...state.cards, { ...action.payload, id: shortid() }]};
+        case 'MODIFY_FILTERSTRING':
+            return {...state, filterString: action.payload};
         default:
             return state;
     }
