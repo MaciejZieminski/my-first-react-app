@@ -12,18 +12,20 @@ const ColumnForm = (props) => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({type: 'ADD_COLUMN', payload: { id, title, icon }})
+        dispatch({type: 'ADD_COLUMN', payload: { value, icon }})
         setValue('');
         setIcon('');
     }
 
 
 
-    return (<form className={styles.columnForm} onSubmit={handleSubmit}>
+    return (
+      <form className={styles.columnForm} onSubmit={handleSubmit}>
                 <span>Title:</span> <TextInput type="text" value={value} onChange={e => setValue(e.target.value)}/>
                 <span>Icon:</span> <TextInput type="text" icon={icon} onChange={e => setIcon(e.target.iconValue)}/>
                 <Button>Add column</Button>
-      </form>);
+      </form>
+    );
 }
 
 export default ColumnForm;
