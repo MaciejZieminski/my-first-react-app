@@ -2,19 +2,20 @@ import styles from './SearchForm.module.scss';
 import TextInput from '../TextInput/TextInput.js';
 import Button from '../Button/Button.js';
 import { useDispatch } from 'react-redux';
+import { modifySearchString } from '../../redux/store';
 
 const SearchForm = () => {
     
-    const [filterString, setFilterString] = '';
+    const [searchString, setSearchString] = '';
     const dispatch = useDispatch();
     const handleSubmit = e => {
         e.preventDefault();
-        dispatch({type: 'MODIFY_FILTERSTRING', payload: {filterString}})
+        dispatch(modifySearchString({searchString}))
     }
     
     return (
         <form className={styles.SearchForm} onSubmit={handleSubmit}>
-            <TextInput placeholder="Search..." filterString={filterString} onSubmit = {e => setFilterString(e.target.value)}/>
+            <TextInput placeholder="Search..." value={searchString} onSubmit = {e => setSearchString(e.target.value)}/>
             <Button>
                 <span className="fa fa-search" />
             </Button>
