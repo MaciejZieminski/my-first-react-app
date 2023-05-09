@@ -1,0 +1,10 @@
+@import '../../styles/settings.scss';
+
+nav {
+    background-color: darken($color-dark, 3%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
