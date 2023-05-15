@@ -3,16 +3,28 @@
 .navBar {
     background-color: darken($color-dark, 3%);
 
+        ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
         a {
             color: $color-light;
             text-decoration: none;
-            font-weight: $font-bold;
+            
             font-size: 16px;
             margin-right: 10px;
 
             span {
                 font-size: 24px;
             }
+        }
+        .linkActive {
+            color: $color-warning
         }
 
 }
@@ -26,3 +38,4 @@
     padding: 20px 0;
     margin: 0 auto;
 }
+

@@ -4,6 +4,8 @@ import Home from './components/Home/Home.js';
 import About from './components/About/About.js';
 import Favourite from './components/Favourite/Favourite.js';
 import { Routes, Route } from 'react-router-dom';
+import NotFound from './components/NotFound/NotFound.js';
+import List from './components/List/List.js';
 
 const App = () => {
   return (
@@ -13,8 +15,9 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/favorite" element={<Favorite />} />
+            <Route path="/favourite" element={<Favourite />} />
             <Route path='*' element={<NotFound />} />
+            <Route path='/list/:listId' element={<List />} />
           </Routes>
         </Container>
     </main>

@@ -1,10 +1,10 @@
 import styles from './About.module.scss';
+import PageTitle from '../PageTitle/PageTitle.js';
+
 
 const About = (props) => {
     return (
-        <Container>
             <PageTitle>About</PageTitle>
-        </Container>
     )
 };
 
