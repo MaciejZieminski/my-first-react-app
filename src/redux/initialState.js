@@ -35,7 +35,9 @@ const initialState = {
       { id: '6', columnId: '3', title: 'Skyrim', isFavourite: false }
     ],
 
-    searchString: '',
+    searchString: {
+      searchString: ''
+    },
 
     lists: [
       {

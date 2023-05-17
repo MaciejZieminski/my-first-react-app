@@ -1,6 +1,7 @@
 import styles from './List.module.scss';
 import Column from '../Column/Column.js';
 import ColumnForm from '../ColumnForm/ColumnForm.js';
+import SearchForm from '../SearchForm/SearchForm.js';
 import { useSelector } from 'react-redux';
 import { getListById } from '../../redux/listsReducer';
 import { getColumnsByList } from '../../redux/columnsReducer'
@@ -24,7 +25,7 @@ const List = () => {
         <section className={styles.columns}>
           {columns.map(columns => <Column key={columns.id} {...columns} />)}
         </section>
-        <ColumnForm />
+        <ColumnForm listId={listId}/>
        </div>
     );
 };
